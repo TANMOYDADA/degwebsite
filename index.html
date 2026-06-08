@@ -1,0 +1,350 @@
+
+<h2 class="sr-only">DEG website sitemap showing current site pages versus new pages to be built for the revamp</h2>
+<style>
+.sm{padding:4px 0 8px;font-size:12px}
+.top-row{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.url-chip{font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;background:var(--color-background-secondary);border:1px solid var(--color-border-tertiary);color:var(--color-text-secondary)}
+.legend-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+.leg{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--color-text-secondary)}
+.leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.dot-exists{background:#3B6D11;opacity:.85}
+.dot-new{background:#534AB7;opacity:.85}
+.dot-expand{background:#854F0B;opacity:.85}
+
+.nav-bar{display:flex;gap:4px;flex-wrap:wrap;align-items:center;padding:8px 12px;border-radius:8px;background:var(--color-background-secondary);border:1px solid var(--color-border-tertiary);margin-bottom:16px;font-size:11px}
+.nav-item{padding:3px 8px;border-radius:4px;border:1px solid transparent;font-weight:500;cursor:default}
+.nav-exists{color:var(--color-text-success);border-color:var(--color-border-success);background:var(--color-background-success)}
+.nav-new{color:#534AB7;border-color:#AFA9EC;background:#EEEDFE}
+.nav-cta{background:#EF9F27;color:#412402;border-color:#BA7517;margin-left:auto}
+.nav-note{font-size:10px;color:var(--color-text-tertiary);margin-left:4px}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.grid-7{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:12px}
+
+.page-card{border-radius:8px;overflow:hidden;border:1px solid var(--color-border-tertiary)}
+.card-head{padding:9px 11px 7px}
+.card-head .ch-anchor{font-size:9px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;opacity:.6;margin-bottom:2px}
+.card-head .ch-name{font-size:12px;font-weight:500;line-height:1.2}
+.card-head .ch-url{font-size:9px;opacity:.6;margin-top:3px;font-family:monospace}
+.card-pages{border-top:1px solid rgba(0,0,0,0.06);padding:8px 11px}
+.page-line{display:flex;align-items:baseline;gap:5px;padding:3px 0;border-bottom:1px solid rgba(0,0,0,0.04);font-size:11px;font-weight:500}
+.page-line:last-child{border-bottom:none}
+.page-line .pl-sub{font-size:10px;font-weight:400;opacity:.65}
+.status-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-bottom:1px}
+
+.card-exists{border-color:#C0DD97;background:#EAF3DE}
+.card-exists .ch-anchor{color:#3B6D11}
+.card-exists .ch-name{color:#27500A}
+.card-exists .page-line{color:#27500A}
+
+.card-new{border-color:#AFA9EC;background:#EEEDFE}
+.card-new .ch-anchor{color:#534AB7}
+.card-new .ch-name{color:#3C3489}
+.card-new .page-line{color:#3C3489}
+
+.card-expand{border-color:#FAC775;background:#FAEEDA}
+.card-expand .ch-anchor{color:#854F0B}
+.card-expand .ch-name{color:#633806}
+.card-expand .page-line{color:#633806}
+
+.sep{height:1px;background:var(--color-border-tertiary);margin:14px 0 12px}
+.section-label{font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-tertiary);margin-bottom:10px}
+
+.footer-bar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;border-radius:8px;overflow:hidden;border:1px solid var(--color-border-tertiary);margin-bottom:8px}
+.fc{padding:10px 12px;background:var(--color-background-secondary)}
+.fc-title{font-size:10px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;letter-spacing:.04em}
+.fc-link{font-size:10px;color:var(--color-text-secondary);display:block;padding:2px 0}
+.fc-link .new-tag{font-size:9px;font-weight:500;color:#534AB7;margin-left:4px}
+</style>
+
+<div class="sm">
+
+<div class="top-row">
+  <span class="url-chip">energy.becknprotocol.io</span>
+  <span class="url-chip">WordPress · Elementor</span>
+  <span class="url-chip">Reference: fabric.nfh.global</span>
+</div>
+
+<div class="legend-row">
+  <div class="leg"><div class="leg-dot dot-exists"></div>Exists on current site</div>
+  <div class="leg"><div class="leg-dot dot-new"></div>New — to be built</div>
+  <div class="leg"><div class="leg-dot dot-expand"></div>Exists — needs significant expansion</div>
+</div>
+
+<div class="nav-bar">
+  <span class="nav-item nav-new">Use cases</span>
+  <span class="nav-item nav-new">What it is</span>
+  <span class="nav-item nav-new">Principles</span>
+  <span class="nav-item nav-new">Capabilities</span>
+  <span class="nav-item nav-new">Primitives</span>
+  <span class="nav-item nav-new">Participants</span>
+  <span class="nav-item nav-new">Docs ↗</span>
+  <span class="nav-note">← all 7 anchor nav items are new · current site has 4 links only</span>
+  <span class="nav-item nav-cta">Build on DEG →</span>
+</div>
+
+<div class="section-label">Homepage sections</div>
+<div class="grid">
+
+  <div class="page-card card-expand">
+    <div class="card-head">
+      <div class="ch-anchor">Exists · expand</div>
+      <div class="ch-name">Hero</div>
+      <div class="ch-url">/#hero</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line"><div class="status-dot dot-expand"></div>Headline — rewrite<span class="pl-sub">generic → specific claim</span></div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Sub-headline — rewrite<span class="pl-sub">outcome-first</span></div>
+      <div class="page-line"><div class="status-dot dot-new"></div>Today / On DEG block<span class="pl-sub">new contrast section</span></div>
+      <div class="page-line"><div class="status-dot dot-exists"></div>Build with DEG CTA<span class="pl-sub">keep</span></div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Read the vision CTA<span class="pl-sub">→ Docs instead</span></div>
+    </div>
+  </div>
+
+  <div class="page-card card-new">
+    <div class="card-head">
+      <div class="ch-anchor">New</div>
+      <div class="ch-name">IES credibility band</div>
+      <div class="ch-url">/#ies</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line"><div class="status-dot dot-new"></div>Ministry of Power, Govt. India</div>
+      <div class="page-line"><div class="status-dot dot-new"></div>REC Limited — nodal agency</div>
+      <div class="page-line"><div class="status-dot dot-new"></div>Nandan Nilekani — chief mentor</div>
+      <div class="page-line"><div class="status-dot dot-new"></div>Link → recindia.nic.in</div>
+    </div>
+  </div>
+
+  <div class="page-card card-new">
+    <div class="card-head">
+      <div class="ch-anchor">New</div>
+      <div class="ch-name">Use cases strip</div>
+      <div class="ch-url">/#use-cases</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line"><div class="status-dot dot-new"></div>IES India</div>
+      <div class="page-line"><div class="status-dot dot-new"></div>UBC — EV charging</div>
+      <div class="page-line"><div class="status-dot dot-new"></div>P2P trading (Tata + UPPCL)</div>
+      <div class="page-line"><div class="status-dot dot-new"></div>UEI — 6M+ orders · 32 GWh</div>
+      <div class="page-line"><div class="status-dot dot-new"></div>UK · Brazil · Germany</div>
+    </div>
+  </div>
+
+  <div class="page-card card-expand">
+    <div class="card-head">
+      <div class="ch-anchor">Exists · expand</div>
+      <div class="ch-name">DEG is / is not</div>
+      <div class="ch-url">/#vision</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line"><div class="status-dot dot-exists"></div>Is: global vision ✓</div>
+      <div class="page-line"><div class="status-dot dot-exists"></div>Is: future-ready ✓</div>
+      <div class="status-dot dot-expand"></div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Add: open DPI framing</div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Add: thin coordination layer</div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Add: not a product / not centralised</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label">New anchor sections — all to be built</div>
+<div class="grid-7">
+
+  <div class="page-card card-new">
+    <div class="card-head">
+      <div class="ch-anchor">New</div>
+      <div class="ch-name">Principles</div>
+      <div class="ch-url">/#principles</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line">Unbundle rails</div>
+      <div class="page-line">Minimal blocks</div>
+      <div class="page-line">Unify, not uniform</div>
+      <div class="page-line">Trust by design</div>
+      <div class="page-line">Ecosystem first</div>
+    </div>
+  </div>
+
+  <div class="page-card card-expand">
+    <div class="card-head">
+      <div class="ch-anchor">Exists · expand</div>
+      <div class="ch-name">Capabilities</div>
+      <div class="ch-url">/#capabilities</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line"><div class="status-dot dot-exists"></div>Universal identity ✓</div>
+      <div class="page-line"><div class="status-dot dot-exists"></div>Machine-readable ✓</div>
+      <div class="page-line"><div class="status-dot dot-exists"></div>Verifiability ✓</div>
+      <div class="page-line"><div class="status-dot dot-new"></div>Value exchange</div>
+      <div class="page-line"><div class="status-dot dot-new"></div>Discovery + trust</div>
+      <div class="page-line"><div class="status-dot dot-new"></div>Policy as code</div>
+    </div>
+  </div>
+
+  <div class="page-card card-new">
+    <div class="card-head">
+      <div class="ch-anchor">New</div>
+      <div class="ch-name">Primitives</div>
+      <div class="ch-url">/#primitives</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line">Identity spec</div>
+      <div class="page-line">Verifiability spec</div>
+      <div class="page-line">Transaction spec</div>
+      <div class="page-line">Contracts spec</div>
+      <div class="page-line">Policy spec</div>
+      <div class="page-line">Trust infra</div>
+    </div>
+  </div>
+
+  <div class="page-card card-new">
+    <div class="card-head">
+      <div class="ch-anchor">New</div>
+      <div class="ch-name">Participants</div>
+      <div class="ch-url">/#participants</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line">Utilities</div>
+      <div class="page-line">Aggregators</div>
+      <div class="page-line">Asset/DER owners</div>
+      <div class="page-line">Prosumers</div>
+      <div class="page-line">Developers</div>
+      <div class="page-line">Agents ★</div>
+    </div>
+  </div>
+
+  <div class="page-card card-new">
+    <div class="card-head">
+      <div class="ch-anchor">New — sub-site</div>
+      <div class="ch-name">Docs ↗</div>
+      <div class="ch-url">/docs</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line">Quick start</div>
+      <div class="page-line">API reference</div>
+      <div class="page-line">IES arch doc ↗</div>
+      <div class="page-line">IES strategy doc ↗</div>
+      <div class="page-line">NFH Fabric ↗</div>
+      <div class="page-line">Sandbox</div>
+    </div>
+  </div>
+
+  <div class="page-card card-new">
+    <div class="card-head">
+      <div class="ch-anchor">New</div>
+      <div class="ch-name">Demos + stories</div>
+      <div class="ch-url">/#explore</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line">P2P trading demo</div>
+      <div class="page-line">EV charging demo</div>
+      <div class="page-line">Explainer videos</div>
+      <div class="page-line">Real-world stories</div>
+    </div>
+  </div>
+
+  <div class="page-card card-new">
+    <div class="card-head">
+      <div class="ch-anchor">New</div>
+      <div class="ch-name">Pathways</div>
+      <div class="ch-url">/#pathways</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line">Energy transition</div>
+      <div class="page-line">Interop + identity</div>
+      <div class="page-line">DER + markets</div>
+      <div class="page-line">Carbon credits</div>
+      <div class="page-line">Policy as code</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label">Existing pages — keep or redirect</div>
+<div class="grid">
+
+  <div class="page-card card-exists">
+    <div class="card-head">
+      <div class="ch-anchor">Keep</div>
+      <div class="ch-name">Events</div>
+      <div class="ch-url">/events</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line"><div class="status-dot dot-exists"></div>DEG Hackathon London</div>
+      <div class="page-line"><div class="status-dot dot-exists"></div>DEG Summit King's College</div>
+      <div class="page-line"><div class="status-dot dot-exists"></div>Ener'gentic Hackathon</div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Move under Community nav</div>
+    </div>
+  </div>
+
+  <div class="page-card card-expand">
+    <div class="card-head">
+      <div class="ch-anchor">Keep · expand</div>
+      <div class="ch-name">Vision paper</div>
+      <div class="ch-url">/vision-paper</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line"><div class="status-dot dot-exists"></div>Paper download ✓</div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Add IES docs alongside</div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Link to recindia.nic.in</div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Surface in Docs nav</div>
+    </div>
+  </div>
+
+  <div class="page-card card-expand">
+    <div class="card-head">
+      <div class="ch-anchor">Replace</div>
+      <div class="ch-name">Imagine with DEG</div>
+      <div class="ch-url">/real-world-applications</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line"><div class="status-dot dot-exists"></div>5 use case areas ✓</div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Replace with Use cases strip</div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Add real deployment data</div>
+      <div class="page-line"><div class="status-dot dot-expand"></div>Narrative cards, not topics</div>
+    </div>
+  </div>
+
+  <div class="page-card card-exists">
+    <div class="card-head">
+      <div class="ch-anchor">Keep</div>
+      <div class="ch-name">Co-attribution</div>
+      <div class="ch-url">footer</div>
+    </div>
+    <div class="card-pages">
+      <div class="page-line"><div class="status-dot dot-exists"></div>FIDE logo ✓</div>
+      <div class="page-line"><div class="status-dot dot-exists"></div>Beckn logo ✓</div>
+      <div class="page-line"><div class="status-dot dot-exists"></div>IEA contribution ✓</div>
+      <div class="page-line"><div class="status-dot dot-new"></div>Add IES · REC · MoP</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sep"></div>
+<div class="section-label">Footer — new 3-column structure (mirrors fabric.nfh.global)</div>
+<div class="footer-bar">
+  <div class="fc">
+    <div class="fc-title">Network</div>
+    <span class="fc-link">Specification <span class="new-tag">new</span></span>
+    <span class="fc-link">IES reference <span class="new-tag">new</span></span>
+    <span class="fc-link">Governance <span class="new-tag">new</span></span>
+  </div>
+  <div class="fc">
+    <div class="fc-title">Build</div>
+    <span class="fc-link">SDKs <span class="new-tag">new</span></span>
+    <span class="fc-link">Reference nodes <span class="new-tag">new</span></span>
+    <span class="fc-link">Sandbox <span class="new-tag">new</span></span>
+    <span class="fc-link">NFH Fabric ↗</span>
+  </div>
+  <div class="fc">
+    <div class="fc-title">Read</div>
+    <span class="fc-link">IES Architecture v0.2 ↗ <span class="new-tag">new</span></span>
+    <span class="fc-link">IES Strategy v0.2 ↗ <span class="new-tag">new</span></span>
+    <span class="fc-link">DEG vision paper</span>
+    <span class="fc-link">Changelog <span class="new-tag">new</span></span>
+  </div>
+</div>
+
+</div>
