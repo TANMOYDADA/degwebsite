@@ -1,305 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Digital Energy Grid (DEG) — Placeholder Website v2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEG Website - White Theme</title>
 <style>
-:root{
-  --bg:#06080f;
-  --panel:#0d1220;
-  --panel2:#111827;
-  --text:#f8fafc;
-  --muted:#94a3b8;
-  --line:#1e293b;
-  --accent:#7dd3fc;
-  --accent2:#a7f3d0;
-}
-*{box-sizing:border-box}
 body{
+  font-family: Inter, Arial, sans-serif;
   margin:0;
-  font-family:Inter,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.55;
+  background:#ffffff;
+  color:#0f172a;
 }
 header{
   position:sticky;
   top:0;
-  z-index:10;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:22px 56px;
-  background:rgba(6,8,15,.86);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
+  background:white;
+  border-bottom:1px solid #e5e7eb;
+  padding:18px 40px;
 }
-.logo{font-weight:700;letter-spacing:.04em}
+.logo{
+  font-weight:800;
+  color:#0ea5e9;
+}
+nav{
+  margin-top:10px;
+}
 nav a{
-  color:var(--muted);
+  margin-right:16px;
   text-decoration:none;
-  margin-left:24px;
+  color:#475569;
   font-size:14px;
 }
-nav a:hover{color:var(--text)}
-section{padding:86px 56px;border-bottom:1px solid var(--line)}
-.eyebrow{
-  color:var(--accent);
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  font-size:12px;
-  margin-bottom:14px;
+section{
+  padding:80px 60px;
+  border-bottom:1px solid #f1f5f9;
 }
 .hero{
-  min-height:78vh;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  align-items:center;
-  gap:48px;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(125,211,252,.22), transparent 28%),
-    radial-gradient(circle at 20% 80%, rgba(167,243,208,.12), transparent 28%),
-    var(--bg);
+  background:linear-gradient(to bottom,#ffffff,#f8fbff);
 }
 h1{
-  font-size:72px;
-  line-height:.95;
-  margin:0 0 24px;
-  max-width:900px;
+  font-size:64px;
+  margin:0 0 20px;
 }
-h2{font-size:44px;line-height:1.05;margin:0 0 18px}
-h3{font-size:22px;margin:0 0 10px}
-p{color:var(--muted);font-size:18px;max-width:760px}
-.cta{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+h2{
+  font-size:40px;
+  margin-bottom:16px;
+}
+.eyebrow{
+  color:#0284c7;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:700;
+}
+p{
+  color:#475569;
+  max-width:800px;
+}
 .btn{
   display:inline-block;
-  padding:14px 20px;
+  padding:12px 18px;
   border-radius:999px;
+  margin-right:10px;
   text-decoration:none;
-  font-weight:600;
+  font-weight:700;
 }
-.primary{background:var(--text);color:var(--bg)}
-.secondary{border:1px solid var(--line);color:var(--text)}
-.visual{
-  min-height:420px;
-  border:1px solid var(--line);
-  border-radius:28px;
-  background:
-    linear-gradient(135deg,rgba(125,211,252,.16),rgba(167,243,208,.08)),
-    var(--panel);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--muted);
-  text-align:center;
-  padding:30px;
+.primary{
+  background:#0ea5e9;
+  color:white;
+}
+.secondary{
+  border:1px solid #cbd5e1;
+  color:#0f172a;
 }
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:18px;
-  margin-top:32px;
+  margin-top:24px;
 }
 .card{
-  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-  border:1px solid var(--line);
-  border-radius:22px;
+  border:1px solid #e2e8f0;
+  border-radius:16px;
+  padding:20px;
+  background:white;
+}
+.placeholder{
+  border:2px dashed #cbd5e1;
+  border-radius:16px;
   padding:24px;
-  min-height:150px;
+  background:#f8fafc;
+  color:#64748b;
 }
-.card p{font-size:15px;margin-bottom:0}
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:start;
-}
-.statement{
-  font-size:30px;
-  color:var(--text);
-  max-width:900px;
-}
-.ticker{
+.video{
+  height:120px;
+  border:2px dashed #93c5fd;
+  border-radius:12px;
   display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:28px;
+  align-items:center;
+  justify-content:center;
+  background:#eff6ff;
+  color:#0284c7;
+  margin-bottom:12px;
 }
-.pill{
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:10px 14px;
-  color:var(--muted);
-  background:rgba(255,255,255,.03);
-}
-.number{
-  color:var(--accent);
-  font-size:14px;
-  margin-bottom:18px;
-}
-.footer{
-  background:#030712;
-  padding:70px 56px;
-}
-@media(max-width:850px){
-  header{padding:18px 24px;display:block}
-  nav{margin-top:14px}
-  nav a{display:inline-block;margin:0 14px 10px 0}
-  section{padding:64px 24px}
-  .hero{grid-template-columns:1fr;min-height:auto}
-  h1{font-size:48px}
-  h2{font-size:34px}
-  .split{grid-template-columns:1fr}
+footer{
+  padding:40px 60px;
+  background:#f8fafc;
+  color:#64748b;
 }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">DEG</div>
-  <nav>
-    <a href="#use-cases">Use cases</a>
-    <a href="#what-it-is">What it is</a>
-    <a href="#principles">Principles</a>
-    <a href="#capabilities">Capabilities</a>
-    <a href="#services">Services</a>
-    <a href="#participants">Participants</a>
-    <a href="#developers">Docs ↗</a>
-  </nav>
+<div class="logo">DIGITAL ENERGY GRID</div>
+<nav>
+<a>Home</a>
+<a>Problem</a>
+<a>What is DEG</a>
+<a>Framework</a>
+<a>Use Cases</a>
+<a>Demos</a>
+<a>Momentum</a>
+<a>Pathways</a>
+<a>Developers</a>
+<a>Join</a>
+</nav>
 </header>
 
 <section class="hero">
-  <div>
-    <div class="eyebrow">For utilities, developers, markets & communities</div>
-    <h1>The open infrastructure for energy coordination.</h1>
-    <p>Placeholder: DEG enables discovery, trust, verification and value exchange across decentralised energy systems, without replacing existing grids, markets or institutions.</p>
-    <div class="cta">
-      <a class="btn primary" href="#join">Join the ecosystem →</a>
-      <a class="btn secondary" href="#developers">Read the docs ↗</a>
-    </div>
-  </div>
-  <div class="visual">
-    Placeholder hero visual<br>
-    Energy assets · actors · policies · transactions · proofs
-  </div>
+<div class="eyebrow">Placeholder Website</div>
+<h1>The Open Infrastructure for Energy Coordination.</h1>
+<p>Placeholder hero content.</p>
+<a class="btn primary">Watch Demos</a>
+<a class="btn secondary">Developer Docs</a>
 </section>
 
-<section id="use-cases">
-  <div class="eyebrow">Use cases</div>
-  <h2>What DEG unlocks.</h2>
-  <div class="grid">
-    <div class="card"><h3>The cheapest verified kilowatt-hour.</h3><p>Placeholder for data centre / enterprise green energy procurement story.</p></div>
-    <div class="card"><h3>Peer-to-peer energy trading.</h3><p>Placeholder for prosumer-to-consumer transaction journey.</p></div>
-    <div class="card"><h3>EV charging, discovered anywhere.</h3><p>Placeholder for open EV charging discovery and reservation.</p></div>
-    <div class="card"><h3>Flexibility that utilities can trust.</h3><p>Placeholder for demand response and DER orchestration.</p></div>
-    <div class="card"><h3>Energy assets made transactable.</h3><p>Placeholder for securitisation and programmable contracts.</p></div>
-    <div class="card"><h3>Green claims that can be verified.</h3><p>Placeholder for green attribution and portable proofs.</p></div>
-  </div>
+<section>
+<div class="eyebrow">Problem</div>
+<h2>Energy is connected, but digitally fragmented.</h2>
+<div class="placeholder">Problem section placeholder</div>
 </section>
 
-<section id="what-it-is">
-  <div class="eyebrow">What it is</div>
-  <h2>The grid moved electrons. DEG moves coordination.</h2>
-  <p class="statement">Today, energy systems are electrically connected but digitally fragmented. DEG provides thin, open digital rails so actors can discover, verify, transact, settle and audit across networks.</p>
-  <div class="ticker">
-    <span class="pill">A rooftop solar unit</span>
-    <span class="pill">A battery</span>
-    <span class="pill">A meter</span>
-    <span class="pill">An EV charger</span>
-    <span class="pill">A flexibility event</span>
-    <span class="pill">A carbon attribute</span>
-    <span class="pill">A tariff rule</span>
-    <span class="pill">A settlement proof</span>
-  </div>
+<section>
+<div class="eyebrow">What is DEG?</div>
+<h2>A thin, open coordination layer for energy.</h2>
+<div class="placeholder">DEG explanation placeholder</div>
 </section>
 
-<section id="principles">
-  <div class="eyebrow">Principles</div>
-  <h2>Designed to unify, not make everything uniform.</h2>
-  <div class="grid">
-    <div class="card"><h3>Unbundle the common rails.</h3><p>Placeholder for separating shared infrastructure from vertical applications.</p></div>
-    <div class="card"><h3>Keep the layer thin.</h3><p>Placeholder for minimal interoperable building blocks.</p></div>
-    <div class="card"><h3>Trust by design.</h3><p>Placeholder for privacy, policy-as-code, authentication and verifiable proofs.</p></div>
-    <div class="card"><h3>Ecosystem first.</h3><p>Placeholder for sandboxes, open APIs and small participant inclusion.</p></div>
-  </div>
+<section>
+<div class="eyebrow">Framework</div>
+<h2>Foundational Building Blocks</h2>
+<div class="grid">
+<div class="card">Universal Addressability</div>
+<div class="card">Verifiability</div>
+<div class="card">Value Exchange</div>
+<div class="card">Discovery & Trust</div>
+<div class="card">Policy-as-Code</div>
+</div>
 </section>
 
-<section id="capabilities">
-  <div class="eyebrow">What is built in</div>
-  <h2>What you get on DEG.</h2>
-  <div class="grid">
-    <div class="card"><h3>Universal addressability.</h3><p>Placeholder for identifying assets, actors and transactions.</p></div>
-    <div class="card"><h3>Portable proofs.</h3><p>Placeholder for metering, flexibility, credentials and green attributes.</p></div>
-    <div class="card"><h3>Discovery and trust.</h3><p>Placeholder for registries, directories and credential services.</p></div>
-    <div class="card"><h3>Value exchange.</h3><p>Placeholder for transactions across energy, flexibility, EV charging and DER services.</p></div>
-    <div class="card"><h3>Machine-readable policy.</h3><p>Placeholder for policy-as-code and dynamic rule enforcement.</p></div>
-    <div class="card"><h3>Auditability.</h3><p>Placeholder for transaction tracing and verifiable audit trails.</p></div>
-  </div>
+<section>
+<div class="eyebrow">Use Cases</div>
+<h2>What becomes possible</h2>
+<div class="grid">
+<div class="card">P2P Energy Trading</div>
+<div class="card">Demand Flexibility</div>
+<div class="card">EV Charging</div>
+<div class="card">Green Attribution</div>
+<div class="card">Virtual BESS</div>
+<div class="card">Energy Securitisation</div>
+</div>
 </section>
 
-<section id="services">
-  <div class="eyebrow">Services</div>
-  <h2>Foundational rails. Composing end-to-end.</h2>
-  <div class="grid">
-    <div class="card"><div class="number">01</div><h3>Registry</h3><p>Placeholder for identities of actors, assets and resources.</p></div>
-    <div class="card"><div class="number">02</div><h3>Credentialing</h3><p>Placeholder for issuing and verifying portable claims.</p></div>
-    <div class="card"><div class="number">03</div><h3>Discovery</h3><p>Placeholder for finding offers, assets and services across the network.</p></div>
-    <div class="card"><div class="number">04</div><h3>Transaction Protocol</h3><p>Placeholder for initiating and completing value exchange.</p></div>
-    <div class="card"><div class="number">05</div><h3>Policy Layer</h3><p>Placeholder for machine-readable rules, tariffs and constraints.</p></div>
-    <div class="card"><div class="number">06</div><h3>Settlement & Audit</h3><p>Placeholder for reconciliation, settlement and audit trails.</p></div>
-  </div>
+<section>
+<div class="eyebrow">Demos</div>
+<h2>Watch DEG in action</h2>
+<div class="grid">
+<div class="card"><div class="video">Video</div>P2P Trading</div>
+<div class="card"><div class="video">Video</div>EV Charging</div>
+<div class="card"><div class="video">Video</div>Demand Flexibility</div>
+<div class="card"><div class="video">Video</div>Energy Securitisation</div>
+</div>
 </section>
 
-<section id="participants">
-  <div class="eyebrow">Participants</div>
-  <h2>Anyone can participate in the energy network.</h2>
-  <div class="grid">
-    <div class="card"><h3>Utilities</h3><p>Placeholder for grid coordination and flexibility procurement.</p></div>
-    <div class="card"><h3>Prosumers</h3><p>Placeholder for selling surplus energy or flexibility.</p></div>
-    <div class="card"><h3>Aggregators</h3><p>Placeholder for coordinating distributed energy resources.</p></div>
-    <div class="card"><h3>Developers</h3><p>Placeholder for building apps, nodes and integrations.</p></div>
-    <div class="card"><h3>Policymakers</h3><p>Placeholder for rule-based market participation and governance.</p></div>
-    <div class="card"><h3>Enterprises</h3><p>Placeholder for energy sourcing, reporting and verified claims.</p></div>
-  </div>
+<section>
+<div class="eyebrow">Momentum</div>
+<h2>From framework to lift-offs</h2>
+<div class="grid">
+<div class="card">India Energy Stack</div>
+<div class="card">Unified Bharat e-Charge</div>
+<div class="card">Unified Energy Interface</div>
+<div class="card">International Collaborations</div>
+</div>
 </section>
 
-<section id="momentum">
-  <div class="eyebrow">Momentum</div>
-  <h2>From framework to real-world lift-offs.</h2>
-  <div class="grid">
-    <div class="card"><h3>India Energy Stack</h3><p>Placeholder for national DPI alignment.</p></div>
-    <div class="card"><h3>Unified Bharat e-Charge</h3><p>Placeholder for open EV charging network.</p></div>
-    <div class="card"><h3>P2P Trading Pilots</h3><p>Placeholder for utility deployments.</p></div>
-    <div class="card"><h3>International Collaborations</h3><p>Placeholder for UK, Brazil, Germany and other geographies.</p></div>
-  </div>
+<section>
+<div class="eyebrow">Pathways</div>
+<h2>Mini-blog pathways</h2>
+<div class="grid">
+<div class="card">Developers</div>
+<div class="card">Utilities</div>
+<div class="card">Policymakers</div>
+<div class="card">Enterprises</div>
+<div class="card">Investors</div>
+</div>
 </section>
 
-<section id="developers">
-  <div class="eyebrow">Developer docs</div>
-  <h2>Build on DEG.</h2>
-  <div class="split">
-    <p>Placeholder: integrate DEG GitHub repositories, NFH Fabric resources, specifications, schemas, APIs, sandboxes and reference implementations.</p>
-    <div class="card">
-      <h3>Docs placeholder</h3>
-      <p>Getting started · Specs · APIs · Schemas · GitHub · Sandbox · Reference implementations</p>
-    </div>
-  </div>
+<section>
+<div class="eyebrow">Developers</div>
+<h2>Build on DEG</h2>
+<div class="placeholder">Developer documentation placeholder</div>
 </section>
 
-<section id="join">
-  <div class="eyebrow">Join the ecosystem</div>
-  <h2>The infrastructure is forming. Build on it.</h2>
-  <p>Placeholder: launch a pilot, build an application, contribute to specifications, or become an ecosystem partner.</p>
-  <div class="cta">
-    <a class="btn primary" href="#">Partner with DEG →</a>
-    <a class="btn secondary" href="#">Explore GitHub ↗</a>
-  </div>
+<section>
+<div class="eyebrow">Join</div>
+<h2>Build, Pilot, Partner, Contribute</h2>
+<div class="placeholder">CTA placeholder</div>
 </section>
 
-<footer class="footer">
-  <h3>Digital Energy Grid</h3>
-  <p>Placeholder footer: Network · Build · Read · Governance · Contact</p>
+<footer>
+DEG Website Placeholder — White Theme
 </footer>
 
 </body>
