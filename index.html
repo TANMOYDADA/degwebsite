@@ -35,7 +35,9 @@ p{color:var(--text);max-width:900px;font-size:18px}
 .card:hover{transform:translateY(-2px);transition:all .2s ease;box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .placeholder{border:1px dashed var(--primary);border-radius:16px;padding:28px;background:var(--light);color:var(--text);margin-top:24px}
 .video{height:125px;border:1px dashed var(--primary);border-radius:22px;display:flex;align-items:center;justify-content:center;background:var(--warm);color:var(--text);margin-bottom:14px;font-weight:700}
-.video-card{display:block;min-height:180px}.alt{background:var(--warm)}
+.video-card{display:block;min-height:180px}
+.video-thumb{width:100%;border-radius:22px;margin-bottom:14px;border:1px solid var(--grey);display:block}
+.alt{background:var(--warm)}
 footer{padding:44px 70px;background:var(--warm);color:var(--text);font-weight:700}
 @media(max-width:1050px){.header-wrap{display:block}nav{justify-content:flex-start;margin-top:14px}}
 @media(max-width:900px){section{padding:64px 24px}header{padding:18px 24px}h1{font-size:44px}h2{font-size:32px}}
@@ -94,11 +96,12 @@ footer{padding:44px 70px;background:var(--warm);color:var(--text);font-weight:70
   <div class="eyebrow">Use Cases</div>
   <h2>What becomes possible</h2>
   <div class="grid">
-    <div class="card"><h3>P2P Energy Trading</h3></div>
+    <div class="card"><h3>Prosumer-to-Consumer Energy Trading</h3></div>
     <div class="card"><h3>Demand Flexibility</h3></div>
     <div class="card"><h3>EV Charging</h3></div>
-    <div class="card"><h3>Green Attribution</h3></div>
-    <div class="card"><h3>Virtual BESS</h3></div>
+    <div class="card"><h3>Energy Credentials</h3></div>
+    <div class="card"><h3>Energy Data Exchange</h3></div>
+    <div class="card"><h3>DER Visibility</h3></div>
     <div class="card"><h3>Energy Securitisation</h3></div>
   </div>
 </section>
@@ -107,7 +110,12 @@ footer{padding:44px 70px;background:var(--warm);color:var(--text);font-weight:70
   <div class="eyebrow">Demos</div>
   <h2>Watch DEG in action</h2>
   <div class="grid">
-    <div class="card video-card"><div class="video">Video</div><h3>P2P Trading</h3></div>
+    <div class="card video-card">
+      <a href="https://www.youtube.com/watch?v=LbERgYo5Ng8&t=5s" target="_blank" rel="noopener noreferrer">
+        <img class="video-thumb" src="https://img.youtube.com/vi/LbERgYo5Ng8/maxresdefault.jpg" alt="Prosumer-to-Consumer Energy Trading Demo Thumbnail" onerror="this.src='https://img.youtube.com/vi/LbERgYo5Ng8/hqdefault.jpg';">
+        <h3>Prosumer-to-Consumer Energy Trading</h3>
+      </a>
+    </div>
     <div class="card video-card"><div class="video">Video</div><h3>EV Charging</h3></div>
     <div class="card video-card"><div class="video">Video</div><h3>Demand Flexibility</h3></div>
     <div class="card video-card"><div class="video">Video</div><h3>Energy Securitisation</h3></div>
