@@ -1,77 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DEG Website - White Theme</title>
+<title>Digital Energy Grid - Placeholder Website</title>
 <style>
+:root{
+  --bg:#ffffff;
+  --soft-bg:#f8fbff;
+  --section-bg:#f8fafc;
+  --text:#0f172a;
+  --muted:#475569;
+  --soft:#64748b;
+  --blue:#0ea5e9;
+  --blue-dark:#0284c7;
+  --border:#e2e8f0;
+  --border-soft:#f1f5f9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-  font-family: Inter, Arial, sans-serif;
+  font-family:Inter,Arial,sans-serif;
   margin:0;
-  background:#ffffff;
-  color:#0f172a;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
 }
 header{
   position:sticky;
   top:0;
+  z-index:20;
   background:white;
   border-bottom:1px solid #e5e7eb;
   padding:18px 40px;
 }
 .logo{
-  font-weight:800;
-  color:#0ea5e9;
+  font-weight:900;
+  color:var(--blue);
+  letter-spacing:.04em;
 }
 nav{
   margin-top:10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 12px;
 }
 nav a{
-  margin-right:16px;
   text-decoration:none;
-  color:#475569;
+  color:var(--muted);
   font-size:14px;
+  padding:8px 10px;
+  border-radius:999px;
+}
+nav a:hover{
+  color:var(--blue-dark);
+  background:#eff6ff;
+}
+nav a.active{
+  color:white;
+  background:var(--blue);
 }
 section{
   padding:80px 60px;
-  border-bottom:1px solid #f1f5f9;
+  border-bottom:1px solid var(--border-soft);
+  scroll-margin-top:120px;
 }
 .hero{
-  background:linear-gradient(to bottom,#ffffff,#f8fbff);
+  background:
+    radial-gradient(circle at 80% 10%, rgba(14,165,233,.12), transparent 30%),
+    linear-gradient(to bottom,#ffffff,#f8fbff);
 }
 h1{
   font-size:64px;
+  line-height:1;
   margin:0 0 20px;
+  max-width:900px;
+  letter-spacing:-.04em;
 }
 h2{
   font-size:40px;
-  margin-bottom:16px;
+  line-height:1.12;
+  margin:0 0 16px;
+  letter-spacing:-.03em;
+}
+h3{
+  font-size:20px;
+  margin:0 0 8px;
+}
+p{
+  color:var(--muted);
+  max-width:800px;
+  font-size:17px;
 }
 .eyebrow{
-  color:#0284c7;
+  color:var(--blue-dark);
   text-transform:uppercase;
   font-size:12px;
   letter-spacing:2px;
-  font-weight:700;
-}
-p{
-  color:#475569;
-  max-width:800px;
+  font-weight:800;
+  margin-bottom:14px;
 }
 .btn{
   display:inline-block;
   padding:12px 18px;
   border-radius:999px;
-  margin-right:10px;
+  margin:12px 10px 0 0;
   text-decoration:none;
-  font-weight:700;
+  font-weight:800;
+  font-size:14px;
 }
 .primary{
-  background:#0ea5e9;
+  background:var(--blue);
   color:white;
 }
 .secondary{
   border:1px solid #cbd5e1;
-  color:#0f172a;
+  color:var(--text);
 }
 .grid{
   display:grid;
@@ -80,17 +124,24 @@ p{
   margin-top:24px;
 }
 .card{
-  border:1px solid #e2e8f0;
+  border:1px solid var(--border);
   border-radius:16px;
   padding:20px;
   background:white;
+  min-height:115px;
+}
+.card p{
+  color:var(--soft);
+  font-size:14px;
+  margin:0;
 }
 .placeholder{
   border:2px dashed #cbd5e1;
   border-radius:16px;
   padding:24px;
-  background:#f8fafc;
-  color:#64748b;
+  background:var(--section-bg);
+  color:var(--soft);
+  margin-top:24px;
 }
 .video{
   height:120px;
@@ -100,128 +151,169 @@ p{
   align-items:center;
   justify-content:center;
   background:#eff6ff;
-  color:#0284c7;
+  color:var(--blue-dark);
   margin-bottom:12px;
+  font-weight:700;
+}
+.alt{
+  background:var(--section-bg);
 }
 footer{
   padding:40px 60px;
-  background:#f8fafc;
-  color:#64748b;
+  background:var(--section-bg);
+  color:var(--soft);
+  font-weight:700;
+}
+@media(max-width:900px){
+  section{padding:60px 24px}
+  header{padding:18px 24px}
+  h1{font-size:44px}
+  h2{font-size:30px}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">DIGITAL ENERGY GRID</div>
-<nav>
-<a>Home</a>
-<a>Problem</a>
-<a>What is DEG</a>
-<a>Framework</a>
-<a>Use Cases</a>
-<a>Demos</a>
-<a>Momentum</a>
-<a>Pathways</a>
-<a>Developers</a>
-<a>Join</a>
-</nav>
+  <div class="logo">DIGITAL ENERGY GRID</div>
+  <nav>
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#problem" class="nav-link">Problem</a>
+    <a href="#what-is-deg" class="nav-link">What is DEG</a>
+    <a href="#framework" class="nav-link">Framework</a>
+    <a href="#usecases" class="nav-link">Use Cases</a>
+    <a href="#demos" class="nav-link">Demos</a>
+    <a href="#momentum" class="nav-link">Momentum</a>
+    <a href="#pathways" class="nav-link">Pathways</a>
+    <a href="#developers" class="nav-link">Developers</a>
+    <a href="#support" class="nav-link">Support</a>
+  </nav>
 </header>
 
-<section class="hero">
-<div class="eyebrow">Placeholder Website</div>
-<h1>The Open Infrastructure for Energy Coordination.</h1>
-<p>Placeholder hero content.</p>
-<a class="btn primary">Watch Demos</a>
-<a class="btn secondary">Developer Docs</a>
+<section id="home" class="hero">
+  <div class="eyebrow">Placeholder Website</div>
+  <h1>The Open Infrastructure for Energy Coordination.</h1>
+  <p>Placeholder hero content for DEG positioning, audience framing, and primary value proposition.</p>
+  <a class="btn primary" href="#demos">Watch Demos</a>
+  <a class="btn secondary" href="#developers">Developer Docs</a>
 </section>
 
-<section>
-<div class="eyebrow">Problem</div>
-<h2>Energy is connected, but digitally fragmented.</h2>
-<div class="placeholder">Problem section placeholder</div>
+<section id="problem">
+  <div class="eyebrow">Problem</div>
+  <h2>Energy is connected, but digitally fragmented.</h2>
+  <div class="placeholder">Problem section placeholder</div>
 </section>
 
-<section>
-<div class="eyebrow">What is DEG?</div>
-<h2>A thin, open coordination layer for energy.</h2>
-<div class="placeholder">DEG explanation placeholder</div>
+<section id="what-is-deg" class="alt">
+  <div class="eyebrow">What is DEG?</div>
+  <h2>A thin, open coordination layer for energy.</h2>
+  <div class="placeholder">DEG explanation placeholder</div>
 </section>
 
-<section>
-<div class="eyebrow">Framework</div>
-<h2>Foundational Building Blocks</h2>
-<div class="grid">
-<div class="card">Universal Addressability</div>
-<div class="card">Verifiability</div>
-<div class="card">Value Exchange</div>
-<div class="card">Discovery & Trust</div>
-<div class="card">Policy-as-Code</div>
-</div>
+<section id="framework">
+  <div class="eyebrow">Framework</div>
+  <h2>Foundational Building Blocks</h2>
+  <div class="grid">
+    <div class="card"><h3>Universal Addressability</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Verifiability</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Value Exchange</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Discovery & Trust</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Policy-as-Code</h3><p>Placeholder</p></div>
+  </div>
 </section>
 
-<section>
-<div class="eyebrow">Use Cases</div>
-<h2>What becomes possible</h2>
-<div class="grid">
-<div class="card">P2P Energy Trading</div>
-<div class="card">Demand Flexibility</div>
-<div class="card">EV Charging</div>
-<div class="card">Green Attribution</div>
-<div class="card">Virtual BESS</div>
-<div class="card">Energy Securitisation</div>
-</div>
+<section id="usecases" class="alt">
+  <div class="eyebrow">Use Cases</div>
+  <h2>What becomes possible</h2>
+  <div class="grid">
+    <div class="card"><h3>P2P Energy Trading</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Demand Flexibility</h3><p>Placeholder</p></div>
+    <div class="card"><h3>EV Charging</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Green Attribution</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Virtual BESS</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Energy Securitisation</h3><p>Placeholder</p></div>
+  </div>
 </section>
 
-<section>
-<div class="eyebrow">Demos</div>
-<h2>Watch DEG in action</h2>
-<div class="grid">
-<div class="card"><div class="video">Video</div>P2P Trading</div>
-<div class="card"><div class="video">Video</div>EV Charging</div>
-<div class="card"><div class="video">Video</div>Demand Flexibility</div>
-<div class="card"><div class="video">Video</div>Energy Securitisation</div>
-</div>
+<section id="demos">
+  <div class="eyebrow">Demos</div>
+  <h2>Watch DEG in action</h2>
+  <div class="grid">
+    <div class="card"><div class="video">Video</div><h3>P2P Trading</h3></div>
+    <div class="card"><div class="video">Video</div><h3>EV Charging</h3></div>
+    <div class="card"><div class="video">Video</div><h3>Demand Flexibility</h3></div>
+    <div class="card"><div class="video">Video</div><h3>Energy Securitisation</h3></div>
+  </div>
 </section>
 
-<section>
-<div class="eyebrow">Momentum</div>
-<h2>From framework to lift-offs</h2>
-<div class="grid">
-<div class="card">India Energy Stack</div>
-<div class="card">Unified Bharat e-Charge</div>
-<div class="card">Unified Energy Interface</div>
-<div class="card">International Collaborations</div>
-</div>
+<section id="momentum" class="alt">
+  <div class="eyebrow">Momentum</div>
+  <h2>From framework to lift-offs</h2>
+  <div class="grid">
+    <div class="card"><h3>India Energy Stack</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Unified Bharat e-Charge</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Unified Energy Interface</h3><p>Placeholder</p></div>
+    <div class="card"><h3>International Collaborations</h3><p>Placeholder</p></div>
+  </div>
 </section>
 
-<section>
-<div class="eyebrow">Pathways</div>
-<h2>Mini-blog pathways</h2>
-<div class="grid">
-<div class="card">Developers</div>
-<div class="card">Utilities</div>
-<div class="card">Policymakers</div>
-<div class="card">Enterprises</div>
-<div class="card">Investors</div>
-</div>
+<section id="pathways">
+  <div class="eyebrow">Pathways</div>
+  <h2>Mini-blog pathways</h2>
+  <div class="grid">
+    <div class="card"><h3>Developers</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Utilities</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Policymakers</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Enterprises</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Investors</h3><p>Placeholder</p></div>
+  </div>
 </section>
 
-<section>
-<div class="eyebrow">Developers</div>
-<h2>Build on DEG</h2>
-<div class="placeholder">Developer documentation placeholder</div>
+<section id="developers" class="alt">
+  <div class="eyebrow">Developers</div>
+  <h2>Build on DEG</h2>
+  <div class="placeholder">Developer documentation placeholder: GitHub, APIs, schemas, NFH Fabric resources</div>
 </section>
 
-<section>
-<div class="eyebrow">Join</div>
-<h2>Build, Pilot, Partner, Contribute</h2>
-<div class="placeholder">CTA placeholder</div>
+<section id="support">
+  <div class="eyebrow">Support</div>
+  <h2>Get help, resources, and ecosystem support.</h2>
+  <div class="grid">
+    <div class="card"><h3>Contact Us</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Developer Support</h3><p>Placeholder</p></div>
+    <div class="card"><h3>FAQs</h3><p>Placeholder</p></div>
+    <div class="card"><h3>Report an Issue</h3><p>Placeholder</p></div>
+  </div>
 </section>
 
 <footer>
-DEG Website Placeholder — White Theme
+  Digital Energy Grid
 </footer>
+
+<script>
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-link");
+
+function setActiveLink() {
+  let current = "home";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 140;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", setActiveLink);
+window.addEventListener("load", setActiveLink);
+</script>
 
 </body>
 </html>
